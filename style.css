@@ -1,0 +1,305 @@
+:root {
+    --primary-color: #333; /* Adjust as needed */
+    --accent-color: #ff6347; /* Adjust as needed */
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    background: url(/images/port.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Header */
+header {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fcf8f8;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    transition:0.3s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Section */
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: rgba(247, 243, 243, 0.932);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h2:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ff6347;
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+
+
+/* Project Section */
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* Individual Project Style */
+.project {
+    padding: 20px;
+    background-color: rgba(244, 213, 213, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.resume-link, #projects a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-link:hover, #projects a:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+/* Responsive: Stack projects on smaller screens */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Contact */
+#contact p, #contact a {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#contact a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact a:hover {
+    color: #ff6347;
+    transform: scale(1.05);
+}
+
+/* Form */
+form label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ef2d2d;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.2);
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition:0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background: #ff6347;
+    transform: translateY(-3px);
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;  
+    object-fit: cover; 
+    margin-right: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+#resume {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#resume h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: #ff6347;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-top: 40px;
+}
+
+/* Animations */
+header, section, footer {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    section {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    form input, form textarea, form button {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
